@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>#make# #model#</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/style.css"> 
+</head>
+<body>
+    <div class="container">
+        <h1>Car Information</h1>
+        <p>Make: #make#</p>
+        <p>Model: #model#</p>
+        <p>Year: #year#</p>
+        <button class="btn btn-back" onclick="location.href='/api/cars'">Back to All Cars</button>
+    </div>
+</body>
+</html>

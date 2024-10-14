@@ -1,0 +1,114 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #555;
+}
+
+.car-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.car-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fafafa;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.car-info {
+  font-size: 1.1em;
+}
+
+.btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #fff;
+  transition: background-color 0.3s ease;
+  font-size: 0.9em;
+}
+
+
+.btn-delete {
+  background-color: #dc3545; 
+}
+
+.btn-delete:hover {
+  background-color: #c82333;
+}
+
+.btn-edit {
+  background-color: #fd7e14; 
+}
+
+.btn-edit:hover {
+  background-color: #e67e22;
+}
+
+.btn-show {
+  background-color: #28a745; 
+}
+
+.btn-show:hover {
+  background-color: #218838;
+}
+
+.btn-save {
+  background-color: #17a2b8;
+}
+
+.btn-save:hover {
+  background-color: #138496;
+}
+
+.btn-back {
+  background-color: #6c757d; 
+}
+
+.btn-back:hover {
+  background-color: #5a6268;
+}
+
+.btn-add {
+  background-color: #007bff; 
+}
+
+.btn-add:hover {
+  background-color: #0056b3;
+}
+
+
+button {
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.car-actions {
+  display: flex;
+  gap: 10px;
+}
