@@ -1,10 +1,9 @@
 import express from "express";
 import fs from "fs";
 import path from "path";
-import cars from "../data/cars.mjs"; 
+import cars from "../data/cars.mjs";
 const router = express.Router();
 const __dirname = path.resolve();
-
 
 function renderFile(filePath, replacements, res) {
   fs.readFile(filePath, "utf8", (err, data) => {
@@ -35,15 +34,27 @@ router.post("/", (req, res) => {
     };
 
     cars.push(newCar);
-    res.redirect("/api/cars"); 
+    res.redirect("/api/cars");
   } else {
     res.send("Incorrect Info");
   }
 });
 
-
 router.get("/", (req, res) => {
-  let carList = cars
+  const { make, year } = req.query;
+  let filteredCars = cars;
+
+  if (make) {
+    filteredCars = filteredCars.filter(
+      (car) => car.make.toLowerCase() === make.toLowerCase()
+    );
+  }
+
+  if (year) {
+    filteredCars = filteredCars.filter((car) => car.year === parseInt(year));
+  }
+
+  let carList = filteredCars
     .map(
       (car) => `
         <li>
